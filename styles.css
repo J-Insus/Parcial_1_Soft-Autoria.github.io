@@ -1,0 +1,133 @@
+/* Reset de márgenes y paddings */
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal que usa flexbox para alinear elementos */
+.container {
+    min-height: 100vh; /* Altura mínima de la pantalla */
+    display: flex;
+    flex-direction: column; /* Elementos en columna */
+}
+
+/* Header con fondo rojo y contenido en línea */
+header {
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Espacio entre título y nav */
+    align-items: center;
+    padding: 15px 30px;
+}
+
+
+/* Menú de navegación */
+
+nav {
+    width: 100%;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Centrado vertical opcional */
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Para que ocupe el ancho completo del nav */
+}
+
+
+nav ul li:first-child {
+    margin-right: auto; /* Empuja los demás a la derecha */
+}
+
+/* Enlaces del menú */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px; /* Espaciado interno */
+    display: block; /* Hace clickeable todo el espacio */
+}
+
+/* Contenido principal */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Importante para que el h2 y el content estén uno debajo del otro */
+    justify-content: center; /* Centrado vertical */
+    align-items: center;    /* Centrado horizontal */
+    padding: 20px;
+    text-align: center;
+
+  
+}
+
+/* Estilo del título de sección */
+main h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Contenedor del contenido de texto e imagen */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Ajusta en pantallas pequeñas */
+
+
+}
+
+/* Imagen */
+.image img {
+    max-width: 100%;
+    height: auto;
+    width: 400px;
+
+}
+
+/* Descripción */
+.description {
+    max-width: 600px;
+    text-align: justify;
+    line-height: 1.6;
+    align-content: center;
+}
+
+/* Footer al final */
+footer {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .description {
+        padding: 0 20px;
+    }
+}
